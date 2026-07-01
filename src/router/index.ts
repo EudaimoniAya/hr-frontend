@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    { path: '/', redirect: '/login' },
     {
       path: '/login',
       name: 'login',
@@ -13,7 +12,44 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: () => import('@/pages/register/index.vue'),
-    }
+    },
+    {
+      path: '/',
+      component: () => import('@/components/MainLayout.vue'),
+      redirect: '/dashboard',
+      children: [
+        {
+          path: 'dashboard',
+          name: 'dashboard',
+          component: () => import('@/pages/dashboard/index.vue'),
+        },
+        {
+          path: 'positions',
+          name: 'positions',
+          component: () => import('@/pages/positions/index.vue'),
+        },
+        {
+          path: 'candidates',
+          name: 'candidates',
+          component: () => import('@/pages/candidates/index.vue'),
+        },
+        {
+          path: 'employees',
+          name: 'employees',
+          component: () => import('@/pages/employees/index.vue'),
+        },
+        {
+          path: 'hr-management',
+          name: 'hr-management',
+          component: () => import('@/pages/hr-management/index.vue'),
+        },
+        {
+          path: 'settings',
+          name: 'settings',
+          component: () => import('@/pages/settings/index.vue'),
+        },
+      ],
+    },
   ],
 })
 
