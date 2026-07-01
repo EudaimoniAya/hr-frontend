@@ -1,0 +1,57 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.tsbuildinfo
+
+# Test coverage
+coverage
+
+# Environment variables (may contain secrets)
+.env
+.env.*
+!.env.example
+
+# Local overrides (Vite uses *.local for local-only config)
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Lint / format cache
+.eslintcache
+.prettiercache
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Vitest
+__screenshots__/
+
+# Vite
+*.timestamp-*-*.mjs
+
+# Playwright E2E test artifacts (e2e/ folder itself is source code — do NOT ignore)
+test-results/
+playwright-report/
+blob-report/
