@@ -4,7 +4,6 @@
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     // Extra safety for array and object lookups, but may have false positives.
-    "baseUrl": ".",
     "noUncheckedIndexedAccess": true,
 
     // Path mapping for cleaner imports.
